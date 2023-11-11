@@ -52,3 +52,8 @@ func GetEnvDuration(envName string, defaultValue time.Duration) time.Duration {
 	}
 	return defaultValue
 }
+
+func LookupEnv(envName string) bool {
+	_, ok := os.LookupEnv(envName)
+	return ok
+}
